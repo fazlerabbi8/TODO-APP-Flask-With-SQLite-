@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+
+# Flask instance folder
+instance/
+
+# SQLite database
+database.db
+*.sqlite3
+
+# Node.js dependencies
+tailwind/node_modules/
+
+# VS Code settings (optional)
+.vscode/
