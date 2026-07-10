@@ -49,16 +49,16 @@ def get_all_todos():
     return todos
 
 
-# def delete_todo(todo_id):
-#     connection = get_db_connection()
+def delete_todo(todo_id):
+    connection = get_db_connection()
 
-#     connection.execute(
-#         "DELETE FROM todos WHERE id=?",
-#         (todo_id,)
-#     )
+    connection.execute(
+        "DELETE FROM todos WHERE id=?",
+        (todo_id,)
+    )
 
-#     connection.commit()
-#     connection.close()
+    connection.commit()
+    connection.close()
 
 
 # def update_todo(todo_id, title):
