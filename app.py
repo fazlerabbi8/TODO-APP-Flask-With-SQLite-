@@ -61,20 +61,20 @@ def delete_todo(todo_id):
     connection.close()
 
 
-# def update_todo(todo_id, title):
-#     connection = get_db_connection()
+def update_todo(todo_id, title):
+    connection = get_db_connection()
 
-#     connection.execute(
-#         """
-#         UPDATE todos
-#         SET title=?
-#         WHERE id=?
-#         """,
-#         (title, todo_id)
-#     )
+    connection.execute(
+        """
+        UPDATE todos
+        SET title=?
+        WHERE id=?
+        """,
+        (title, todo_id)
+    )
 
-#     connection.commit()
-#     connection.close()
+    connection.commit()
+    connection.close()
 
 
 # def toggle_complete(todo_id):
