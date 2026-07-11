@@ -118,20 +118,20 @@ def delete(todo_id):
     return redirect(url_for("home"))
 
 
-# @app.route("/toggle/<int:todo_id>")
-# def toggle(todo_id):
-#     toggle_complete(todo_id)
-#     return redirect(url_for("home"))
+@app.route("/toggle/<int:todo_id>")
+def toggle(todo_id):
+    toggle_complete(todo_id)
+    return redirect(url_for("home"))
 
 
-# @app.route("/edit/<int:todo_id>", methods=["POST"])
-# def edit(todo_id):
-#     title = request.form["title"].strip()
+@app.route("/edit/<int:todo_id>", methods=["POST"])
+def edit(todo_id):
+    title = request.form["title"].strip()
 
-#     if title:
-#         update_todo(todo_id, title)
+    if title:
+        update_todo(todo_id, title)
 
-#     return redirect(url_for("home"))
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
