@@ -93,23 +93,23 @@ def toggle_complete(todo_id):
     connection.close()
 
 
-# @app.route("/", methods=["GET", "POST"])
-# def home():
+@app.route("/", methods=["GET", "POST"])
+def home():
 
-#     if request.method == "POST":
-#         title = request.form["title"].strip()
+    if request.method == "POST":
+        title = request.form["title"].strip()
 
-#         if title:
-#             add_todo(title)
+        if title:
+            add_todo(title)
 
-#         return redirect(url_for("home"))
+        return redirect(url_for("home"))
 
-#     todos = get_all_todos()
+    todos = get_all_todos()
 
-#     return render_template(
-#         "index.html",
-#         todos=todos
-#     )
+    return render_template(
+        "index.html",
+        todos=todos
+    )
 
 
 # @app.route("/delete/<int:todo_id>")
